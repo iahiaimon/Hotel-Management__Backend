@@ -16,10 +16,7 @@ SECRET_KEY = "django-insecure-hgzxm^g1u0xawh5@#+o7fp_a*to$)8-6vs)qt)i9za2_k@+c=@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "https://hotel-management-backend-0mx7.onrender.com",
-    "http://localhost:8000"
-]
+ALLOWED_HOSTS = ["hotel-management-backend-0mx7.onrender.com", "localhost:8000"]
 
 
 # Application definition
@@ -129,8 +126,8 @@ CORS_ALLOW_CREDENTIALS = True
 # (for development only, not production)
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://hotel-frontend.vercel.app",  # your deployed frontend
-    "http://localhost:5173",  # optional, for local dev
+    "hotel-frontend.vercel.app",  # your deployed frontend
+    "localhost:5173",  # optional, for local dev
 ]
 
 
