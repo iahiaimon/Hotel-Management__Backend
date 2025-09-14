@@ -8,9 +8,7 @@ from accounts.models import CustomUser
 class Room(BaseModel):
     title = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(
-        max_length=500, null=True, blank=True, default="default_room.webp"
-    )
+    image = models.ImageField(max_length=500, null=True, blank=True)
     area = models.CharField(max_length=100)
     beds = models.IntegerField()
     baths = models.IntegerField()
@@ -18,7 +16,11 @@ class Room(BaseModel):
     description = models.TextField()
     is_booked = models.BooleanField(default=False)
     booked_by = models.ForeignKey(
-        CustomUser, on_delete=models.SET_NULL, null=True, blank=True, related_name="bookings"
+        CustomUser,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="bookings",
     )
 
     def __str__(self):
