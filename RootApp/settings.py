@@ -124,11 +124,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 
 # (for development only, not production)
-CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [
-    "hotel-frontend.vercel.app",  # your deployed frontend
-    "localhost:5173",  # optional, for local dev
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # REST Framework settings
